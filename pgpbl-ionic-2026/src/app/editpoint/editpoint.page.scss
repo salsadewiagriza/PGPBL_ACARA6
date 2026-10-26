@@ -1,0 +1,44 @@
+/* =====================================================
+   EDIT POINT MAP STYLES
+   ===================================================== */
+
+   #mapedit {
+    width: 100vw; /* Memenuhi lebar penuh layar */
+    height: 500px;
+    margin-bottom: 24px;
+  }
+
+  /* Container khusus untuk form input di bawah peta */
+  .form-container {
+    width: 100%;
+    padding: 0 16px 32px 16px;
+  }
+
+  /* =====================================================
+     LEAFLET MARKER & SHADOW FIX FOR EDITPOINT PAGE
+     ===================================================== */
+  :host ::ng-deep {
+    .leaflet-marker-icon,
+    .leaflet-marker-shadow,
+    .leaflet-div-icon,
+    .leaflet-shadow-pane {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+
+    .leaflet-pane img,
+    .leaflet-marker-pane img,
+    .leaflet-shadow-pane img,
+    img.leaflet-marker-icon,
+    img.leaflet-marker-shadow {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+      max-width: none !important;
+    }
+  }

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/maps"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Point</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Hapus ion-padding dari ion-content -->
+<ion-content>
+  <!-- Peta berada di luar container agar memenuhi lebar layar (100% full width) -->
+  <div id="mapedit"></div>
+
+  <!-- Form input dibungkus container agar tetap rapi -->
+  <div class="form-container">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Coordinates</ion-label>
+      <ion-input [(ngModel)]="coordinates"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Description</ion-label>
+      <ion-input [(ngModel)]="description"></ion-input>
+    </ion-item>
+
+    <ion-button
+      expand="block"
+      (click)="save()"
+      class="ion-margin-top">
+      SAVE
+    </ion-button>
+  </div>
+</ion-content>

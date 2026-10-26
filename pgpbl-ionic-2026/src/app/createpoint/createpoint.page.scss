@@ -1,0 +1,49 @@
+/* =====================================================
+   CREATE POINT MAP STYLES
+   ===================================================== */
+
+   #mapcreate {
+    width: 100%;
+    height: 500px; /* Dinaikkan ke 550px agar peta makin tinggi & leluasa */
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Container penyeimbang form di layar lebar/desktop */
+  .form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px 32px 16px;
+  }
+
+  /* =====================================================
+     LEAFLET MARKER & SHADOW FIX FOR CREATEPOINT PAGE
+     ===================================================== */
+  :host ::ng-deep {
+    /* Netralkan container marker, shadow pane, dan div icon */
+    .leaflet-marker-icon,
+    .leaflet-marker-shadow,
+    .leaflet-div-icon,
+    .leaflet-shadow-pane {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+
+    /* Hilangkan background/border bawaan Ionic pada elemen img di dalam peta */
+    .leaflet-pane img,
+    .leaflet-marker-pane img,
+    .leaflet-shadow-pane img,
+    img.leaflet-marker-icon,
+    img.leaflet-marker-shadow {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+      max-width: none !important;
+    }
+  }
